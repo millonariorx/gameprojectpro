@@ -1,0 +1,7 @@
+pip install -r requirements.txt --use-pep517
+
+
+# refresh migrations
+rm -rf ApiGameApp\migrations
+python manage.py makemigrations ApiGameApp
+python manage.py migrate ApiGameApp

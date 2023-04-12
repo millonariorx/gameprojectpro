@@ -1,0 +1,65 @@
+<p-card>
+    <div class="grid">
+        <div class="lg:col-2"></div>
+        <div class="col-12 lg:col-8">
+            <div class="col-12">
+                <h2 class="text-center mt-0">onDemand - Online</h2>
+            </div>
+            <div class="col-12">
+                <button pButton [routerLink]="['form']" label="Crear juego" class="p-button-success p-button-sm md:w-auto lg:w-auto w-full"></button>
+            </div>
+            <div class="col-12">
+                <p>Busqueda por:</p>
+            </div>
+            <div class="col-12 field">
+                <label for="category">Categoria</label>
+                <p-dropdown styleClass="w-full" (ngModelChange)="categoryChange($event)" [options]="categories" [(ngModel)]="selectedCategory" optionLabel="CategoryName"></p-dropdown>
+            </div>
+            <div class=" col-12 field mb-0">
+                <label for="status">Estado</label>
+                <p-dropdown styleClass="w-full" (ngModelChange)="statusChange($event)" [options]="status" [(ngModel)]="selectedStatus" optionLabel="name"></p-dropdown>
+            </div>
+
+        </div>
+        <div class="lg:col-2"></div>
+    </div>
+
+</p-card>
+<p-card>
+    <div class="grid">
+        <div class="lg:col-2"></div>
+        <div class="col-12 lg:col-8">
+            <p-table [value]="games" [tableStyle]="{ 'min-width': '50rem' }">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Juego</th>
+                        <th>Categoria</th>
+                        <th>Portada</th>
+                        <th>Habilitado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-game>
+                    <tr>
+                        <td>{{ game.Name }}</td>
+                        <td>{{ game.CategoryName }}</td>
+                        <td>
+                            <div class="card flex justify-content-center">
+                                <p-image src="{{urlImage}}/{{ game.PathCoverGame }}" alt="Image" width="70" [preview]="true"></p-image>
+                            </div>
+                        </td>
+                        <td>
+                            <p-inputSwitch [(ngModel)]="!!game.IsDisabled" (ngModelChange)="chxDisabled($event, game.IdGame)"></p-inputSwitch>
+                        </td>
+                        <td>
+                            <p-button [routerLink]="['detail', game.IdGame]" icon="pi pi-eye" styleClass="p-button-rounded p-button-sm"></p-button>&nbsp;
+                            <p-button icon="pi pi-play" styleClass="p-button-rounded p-button-sm p-button-success"></p-button>&nbsp;
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+        </div>
+        <div class="lg:col-2"></div>
+    </div>
+</p-card>

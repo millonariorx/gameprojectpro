@@ -1,0 +1,72 @@
+[
+  {
+    "_id": {
+      "$oid": "642a0be9a52a75a8b3f52306"
+    },
+    "CategoryId": 1,
+    "CategoryName": "Sandbox"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c07a52a75a8b3f52307"
+    },
+    "CategoryId": 2,
+    "CategoryName": "Real-time strategy (RTS)"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c3fa52a75a8b3f52308"
+    },
+    "CategoryId": 3,
+    "CategoryName": "Shooters (FPS and TPS)"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c52a52a75a8b3f52309"
+    },
+    "CategoryId": 4,
+    "CategoryName": "Multiplayer online battle arena (MOBA)"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c61a52a75a8b3f5230a"
+    },
+    "CategoryId": 5,
+    "CategoryName": "Role-playing (RPG, ARPG, and More)"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c72a52a75a8b3f5230b"
+    },
+    "CategoryId": 6,
+    "CategoryName": "Simulation and sports"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c82a52a75a8b3f5230c"
+    },
+    "CategoryId": 7,
+    "CategoryName": "Puzzlers and party games"
+  },
+  {
+    "_id": {
+      "$oid": "642a0c8fa52a75a8b3f5230d"
+    },
+    "CategoryId": 8,
+    "CategoryName": "Action-adventure"
+  },
+  {
+    "_id": {
+      "$oid": "642a0ca0a52a75a8b3f5230e"
+    },
+    "CategoryId": 9,
+    "CategoryName": "Survival and horror"
+  },
+  {
+    "_id": {
+      "$oid": "642a0caba52a75a8b3f5230f"
+    },
+    "CategoryId": 10,
+    "CategoryName": "Platformer"
+  }
+]

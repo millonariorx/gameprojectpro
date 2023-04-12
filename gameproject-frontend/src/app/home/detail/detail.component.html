@@ -1,0 +1,45 @@
+<p-card>
+    <div class="grid">
+        <div class="col-12">
+            <h2 class="text-center">Detalles del Juego</h2>
+        </div>
+
+        <div class="lg:col-2"></div>
+        <div class="col-12 lg:col-8">
+            <div class="col-12">
+                <strong>Nombre:</strong>&nbsp;<span *ngIf="game">{{game.Name}}</span>
+            </div>
+            
+            <div class="col-12">
+                <strong>Categoria:</strong>&nbsp;<span *ngIf="game">{{game.CategoryName}}</span>
+            </div>
+    
+            <div class="col-12">
+                <strong>Portada:</strong>&nbsp;
+            </div>
+            <div class="col-12">
+                <p-image *ngIf="game" src="{{urlImage}}/{{ game.PathCoverGame }}" alt="Image" width="70" [preview]="true"></p-image>
+            </div>
+    
+            <div class="col-12">
+                <strong>Fecha de Lanzamiento:</strong>&nbsp;<span *ngIf="game">{{game.ReleaseDate}}</span>
+            </div>
+            
+            <div class="col-12">
+                <strong>Veces Jugado:</strong>&nbsp;<span *ngIf="game">{{game.CountNumberGame}}</span>
+            </div>
+            
+            <div class="col-12">
+                <strong>Jugador del Record:</strong>&nbsp;<span *ngIf="game">{{game.UrlPlayerRecord}}</span>
+            </div>
+    
+            <div class="col-12">
+                <strong>Estado:</strong>&nbsp;<span *ngIf="game">{{game.IsDisabled ? "Activo":"Inactivo"}}</span>
+            </div>
+
+
+        </div>
+        <div class="lg:col-2"></div>
+
+    </div>
+</p-card>

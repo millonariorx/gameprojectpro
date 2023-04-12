@@ -1,0 +1,7 @@
+.env
+venv
+env
+.venv
+ApiGameApp/__pycache__
+ApiGameApp/migrations/__pycache__
+__pycache__

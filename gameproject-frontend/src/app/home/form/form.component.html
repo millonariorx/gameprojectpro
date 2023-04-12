@@ -1,0 +1,83 @@
+<p-card>
+    <div class="grid">
+        <div class="col-12">
+            <h2 class="text-center mt-0">Crear Juego</h2>
+        </div>
+        <div class="lg:col-2"></div>
+        <div class="col-12 lg:col-8">
+            <form [formGroup]="formGame" class="w-full">
+                <div class="col-12">
+                    <span class="p-float-label">
+                        <input id="Name" formControlName="Name" class="p-inputtext-sm w-full" type="text" pInputText />
+                        <label htmlFor="Name">Nombre</label>
+                    </span>
+                </div>
+    
+                <div class="col-12">
+                    <!-- <label for="category">Categoria</label> -->
+                    <p-dropdown
+                        styleClass="w-full"
+                        formControlName="CategoryId"
+                        [options]="categories" 
+                        [(ngModel)]="selectedCategory" 
+                        optionLabel="CategoryName" 
+                        optionValue="CategoryId"
+                        >
+                    </p-dropdown>
+                </div>
+    
+                <div class="col-12 mt-2">
+                    <p-fileUpload
+                    styleClass="w-full"
+                    [showUploadButton]="false"
+                    [showCancelButton]="false" 
+                    [customUpload]="true"
+                    name="PathCoverGame" 
+                    (onSelect)="uploadFile($event)"
+                    (onRemove)="showClear()"
+                    [multiple]="false"
+                    chooseLabel="Portada"
+                    >
+                    </p-fileUpload>
+                </div>
+    
+                <div class="col-12">
+                    <input class="w-full" type="date" formControlName="ReleaseDate" pInputText/>
+                </div>
+    
+                <div class="col-12">
+                    <p-inputNumber placeholder="Veces Jugados" inputId="integeronly" formControlName="CountNumberGame" [(ngModel)]="CountNumberGame" ngClass="w-full" styleClass="w-full"></p-inputNumber>
+                    <!-- <input pInputText formControlName="CountNumberGame" inputId="integeronly" pKeyFilter="int" placeholder="Veces Jugados" [(ngModel)]="CountNumberGame" /> -->
+    
+                </div>
+                
+                <div class="col-12 mt-2">
+                    <span class="p-float-label">
+                        <input id="UrlPlayerRecord" formControlName="UrlPlayerRecord" class="p-inputtext-sm w-full" type="text" pInputText />
+                        <label htmlFor="UrlPlayerRecord">Jugador del Record</label>
+                    </span>
+                </div>
+    
+                <div class="col-12">
+                    <p-toast [breakpoints]="{'920px': {width: '100%', right: '0', left: '0'}}"></p-toast>
+                    <button (click)="register()" pButton label="Guardar" class="p-button-success p-button-sm w-full"></button>
+                 </div>
+    
+            </form>
+        </div>
+        <div class="lg:col-2"></div>
+        
+   
+
+        <!-- <div class="col-12 mt-2">
+            <p-fileUpload
+            #fileUpload
+            [customUpload]="false"
+            [showUploadButton]="false"
+            [showCancelButton]="false"
+            (uploadHandler)="onUpload($event)"
+          ></p-fileUpload>
+        </div> -->
+   
+    </div>
+</p-card>

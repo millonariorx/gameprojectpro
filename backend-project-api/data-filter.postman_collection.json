@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "69c2ae39-2be7-4cbd-8d77-e71af617d4a8",
+		"name": "data-filter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/filter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Access-Control-Request-Headers",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CategoryId",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "Name",
+							"value": "Dota 300",
+							"type": "default"
+						},
+						{
+							"key": "PathCoverGame",
+							"type": "file",
+							"src": "/C:/Users/LENOVO/Downloads/portada_army_men.png"
+						},
+						{
+							"key": "ReleaseDate",
+							"value": "2013-04-12",
+							"type": "default"
+						},
+						{
+							"key": "CountNumberGame",
+							"value": "1329923323",
+							"type": "default"
+						},
+						{
+							"key": "UrlPlayerRecord",
+							"value": "https://www.playerprodota.com",
+							"type": "default"
+						},
+						{
+							"key": "IsDisabled",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/filter",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "CategoryId",
+							"value": "3",
+							"type": "default"
+						},
+						{
+							"key": "IsDisabled",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/filter",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/disabled",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "IdGame",
+							"value": "1",
+							"type": "default"
+						},
+						{
+							"key": "IsDisabled",
+							"value": "0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/disabled",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"disabled"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
